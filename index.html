@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SITE DEFACED</title>
+
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* NORMAL CURSOR */
+    cursor: url('download.png') 0 0, auto;
+    overflow: hidden;
+}
+
+/* CLICKED CURSOR - Changes to your second hand image */
+body:active {
+    cursor: url('download2.png') 0 0, auto;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("download (7).jpg");
+    background-size: auto 101%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: contrast(150%) brightness(60%); 
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* THE INFINITE TEXT LAYER */
+.text-overlay {
+    position: fixed;
+    top: -10%; 
+    left: -10%;
+    width: 120vw; 
+    height: 120vh; 
+    
+    /* MODIFIED SVG: 
+       - Removed XXXX and 0000 
+       - Keeping only IM STILL HERE 
+    */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='150'><text x='20' y='80' fill='white' font-family='MS Sans Serif, Geneva, sans-serif' font-weight='bold' font-size='50' opacity='0.25'>IM STILL HERE</text></svg>");
+    
+    background-repeat: repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+<div class="text-overlay"></div>
+
+</body>
+</html>
